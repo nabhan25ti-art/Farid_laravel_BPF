@@ -12,7 +12,8 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        //
+        $data['dataPelanggan'] = Pelanggan::all();
+        return view('admin.pelanggan.index', $data);
     }
 
     /**
@@ -20,7 +21,7 @@ class PelangganController extends Controller
      */
     public function create()
     {
-		return view('admin.pelanggan.create');
+        return view('admin.pelanggan.create');
     }
 
     /**
@@ -30,15 +31,15 @@ class PelangganController extends Controller
     {
 
         $data['first_name'] = $request->first_name;
-		$data['last_name'] = $request->last_name;
-		$data['birthday'] = $request->birthday;
-		$data['gender'] = $request->gender;
-		$data['email'] = $request->email;
-		$data['phone'] = $request->phone;
-		
-		Pelanggan::create($data);
-		
-		return redirect()->route('pelanggan.index')->with('success','Penambahan Data Berhasil!');
+        $data['last_name'] = $request->last_name;
+        $data['birthday'] = $request->birthday;
+        $data['gender'] = $request->gender;
+        $data['email'] = $request->email;
+        $data['phone'] = $request->phone;
+
+        Pelanggan::create($data);
+
+        return redirect()->route('pelanggan.index')->with('success', 'Penambahan Data Berhasil!');
     }
 
     /**
