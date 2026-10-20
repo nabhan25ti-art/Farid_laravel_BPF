@@ -110,9 +110,18 @@
 						<span class="sidebar-text">Dashboard</span>
 					</a>
 				</li>
-			
-				
-			
+
+
+				<li class="nav-item  active ">
+					<a href="{{route('pelanggan.index')}}" class="nav-link">
+						<span class="sidebar-icon">
+							<svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"></path>
+							</svg>
+						</span>
+						<span class="sidebar-text">Pelanggan</span>
+					</a>
+				</li>
 				<li class="nav-item">
 					<span class="nav-link collapsed d-flex justify-content-between align-items-center"
 						data-bs-toggle="collapse" data-bs-target="#submenu-app">
@@ -146,67 +155,7 @@
 						</ul>
 					</div>
 				</li>
-				
-				<li class="nav-item">
-					<span class="nav-link collapsed d-flex justify-content-between align-items-center"
-						data-bs-toggle="collapse" data-bs-target="#submenu-components">
-						<span>
-							<span class="sidebar-icon">
-								<svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path>
-									<path fill-rule="evenodd"
-										d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
-										clip-rule="evenodd"></path>
-								</svg>
-							</span>
-							<span class="sidebar-text">Components</span>
-						</span>
-						<span class="link-arrow">
-							<svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd"
-									d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-									clip-rule="evenodd"></path>
-							</svg>
-						</span>
-					</span>
-					<div class="multi-level collapse" role="list" id="submenu-components" aria-expanded="false">
-						<ul class="flex-column nav">
-							<li class="nav-item">
-								<a class="nav-link" target="_blank"
-									href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">
-									<span class="sidebar-text">All Components</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									<span class="sidebar-text">Buttons</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									<span class="sidebar-text">Notifications</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									<span class="sidebar-text">Forms</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									<span class="sidebar-text">Modals</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									<span class="sidebar-text">Typography</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
+
 				<li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 				<li class="nav-item">
 					<a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
@@ -223,7 +172,7 @@
 								class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.4</span></span>
 					</a>
 				</li>
-				
+
 				<li class="nav-item">
 					<a href="#" class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
 						<span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
@@ -864,19 +813,21 @@
 			<div class="col-12 col-xl-4">
 				<div class="col-12 px-0 mb-4">
 					<div class="card shadow border-0 text-center p-0">
-						<div class="profile-cover rounded-top" data-background="{{ asset('assets-admin/img/profile-cover.jpg') }}" style="background: url('{{ asset('assets-admin/img/profile-cover.jpg') }}');"></div>
+						<div class="profile-cover rounded-top" data-background="{{ asset('assets-admin/img/profile-cover.jpg') }}" style="background: url()"></div>
 						<div class="card-body pb-5">
 							<img src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
 							<h4 class="h3">Neil Sims</h4>
 							<h5 class="fw-normal">Senior Software Engineer</h5>
 							<p class="text-gray mb-4">New York, USA</p>
 							<a class="btn btn-sm btn-gray-800 d-inline-flex align-items-center me-2" href="#">
-								<svg class="icon icon-xs me-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg>
+								<svg class="icon icon-xs me-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
+								</svg>
 								Connect
 							</a>
 							<a class="btn btn-sm btn-secondary" href="#">Send Message</a>
 						</div>
-					 </div>
+					</div>
 				</div>
 				<div class="col-12 px-0 mb-4">
 					<div class="card border-0 shadow">
