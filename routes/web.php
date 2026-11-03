@@ -7,7 +7,6 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\BiodataController;
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,3 +20,4 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 Route::resource('pelanggan', PelangganController::class);
 
 Route::resource('biodata', BiodataController::class);
+
